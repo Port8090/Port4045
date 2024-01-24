@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,6 +25,13 @@ SECRET_KEY = 'django-insecure-1i5@wd5$y9ca-#crb&=j-_6%6sqjd0b1_idq%y1asgl^2-4%*b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+MAX_UPLOAD_SIZE = 5242880
+ALLOWED_FILE_TYPES = [
+    'image/jpeg',
+    'image/png',
+    'image/gif',
+    'application/pdf',
+]
 ALLOWED_HOSTS = []
 
 
@@ -117,6 +124,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# 미디어 파일을 관리할 루트 media 디렉터리
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# 각 media file에 대한 URL prefix
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

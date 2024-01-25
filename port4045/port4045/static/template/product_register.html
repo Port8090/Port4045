@@ -1,0 +1,16 @@
+<form method="POST" action="." enctype="multipart/form-data" style="user-select: auto;">
+  {% csrf_token %}
+  {% for field in form %}
+  <div class="form-group">
+      <lable for="{{ field.id_for_label }}">{{ field.label }}</lable>
+      {% if field.name == 'description' %}
+      <textarea class="form-control" name="{{ field.name }}" id="field.id_for_label" placeholder="상품설명을 써주세요~!"></textarea>
+      {% else %}
+      <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
+      {% endif %}
+  </div>
+  {% if field.errors %}
+  <span style="color:red">{{ field.errors }}</span>
+  {% endif %}
+  {% endfor %}
+  <button type="submit" class="btn btn-primary">상품등록</button>

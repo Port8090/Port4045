@@ -5,6 +5,6 @@ from . import views
 app_name = 'foodpic'
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name='index'),
     path('create/', views.create, name='create'),
 ]

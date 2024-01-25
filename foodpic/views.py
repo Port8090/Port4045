@@ -13,7 +13,7 @@ def create(request):
         form = imageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('foodpic')
+            return redirect('foodpic:index')
     else:
         form = imageForm()
     return redirect('foodpic')

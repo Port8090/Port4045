@@ -16,8 +16,7 @@ def create(request):
         form = imageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            
-            context = {'image_url': 'images/image3863.jpg'}
+            context = {'img_url':'#'}
             return render(request, 'result.html', context)
     else:
         form = imageForm()

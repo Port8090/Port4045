@@ -16,7 +16,7 @@ def 펑션_파일업로드(request):
  
     변수_테이블의모든정보 = models.Product.objects.all()
  
-    return render(request, "imgUp/result.html", context = {
+    return render(request, "result.html", context = {
         "키_테이블의모든정보": 변수_테이블의모든정보
     })
 """ from django.shortcuts import render

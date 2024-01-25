@@ -1,8 +1,8 @@
 from django import forms
-from .models import Question
+from .models import Image
 
 
 class imageForm(forms.ModelForm):
     class Meta:
-        model = Question  # 사용할 모델
-        fields = ['image']  # QuestionForm에서 사용할 Question 모델의 속성
+        model = Image  # 사용할 모델
+        fields = ['path']  # Image 모델에서 사용할 속성

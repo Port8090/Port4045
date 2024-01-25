@@ -9,7 +9,7 @@ from django.http import HttpResponse
 
 from ultralytics import YOLO
 
-model = YOLO('./yolov8n.pt')
+model = YOLO('./best_n_e15_b2_i416.pt')
 
 from PIL import Image
 

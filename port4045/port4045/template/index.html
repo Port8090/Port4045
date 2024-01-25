@@ -1,0 +1,22 @@
+<h1>Article New</h1>
+
+<form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+    <img id="imgPreview">
+
+    <input type="submit">
+</form>
+
+<script>
+    document.getElementById('id_image').addEventListener('change', function() {
+        var file = this.files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('imgPreview').src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    });
+</script>

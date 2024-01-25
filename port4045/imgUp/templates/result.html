@@ -1,0 +1,14 @@
+<table>
+  <tr>
+      <th>ID</th>
+      <th>File Path</th>
+      <th>Upload Date & Time</th>
+  </tr>
+  {% for info in 키_테이블의모든정보 %}
+      <tr>
+          <td>{{ info.id }}</td>
+          <td>{{ info.컬럼_파일위치 }}</td>
+          <td>{{ info.컬럼_업로드날 }}</td>
+      </tr>
+  {% endfor %}
+</table>

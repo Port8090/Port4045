@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Product(models.Model):
+""" class Product(models.Model):
     product = models.CharField(max_length=32,verbose_name='product_name')
     price = models.IntegerField(verbose_name='product_price')
     description = models.TextField(verbose_name='product_description')
@@ -15,4 +15,8 @@ class Product(models.Model):
     class Meta:
         db_table = 'product_table'
         verbose_name = '제품'
-        verbose_name_plural = '제품'
+        verbose_name_plural = '제품' """
+
+class Product(models.Model) :
+    colPath = models.FileField(upload_to='Uploaded Files/%y/%m/%d/', blank=True)
+    colDay = models.DateField(auto_now = True)

@@ -1,6 +1,27 @@
+from imgUp import models
 from django.shortcuts import render
+from imgUp.models import Product
+
+def 펑션_파일업로드(request):
+    if request.method == "POST":
+    #폼에서 데이터를 받아와 변수화시키기
+    
+        변수_업로드파일 = request.FILES["인풋_파일업로드"]
+ 
+        # 정보를 파일에 저장하기
+        변수_파일저장 = models.Product(
+            컬럼_파일위치 = 변수_업로드파일
+        )
+        변수_파일저장.save()
+ 
+    변수_테이블의모든정보 = models.Product.objects.all()
+ 
+    return render(request, "imgUp/result.html", context = {
+        "키_테이블의모든정보": 변수_테이블의모든정보
+    })
+""" from django.shortcuts import render
 from django.views.generic.edit import FormView
-from .forms import RegisterForm  # RegisterForm이 정의된 경로로 수정해야 합니다.
+from .forms import RegisterForm # imageForm # RegisterForm이 정의된 경로로 수정해야 합니다.
 from .models import Product  # Product 모델이 정의된 경로로 수정해야 합니다.
 
 # Create your views here.
@@ -19,3 +40,7 @@ class ProductRegister(FormView):
         )
         product.save()
         return super().form_valid(form)
+"""    
+""" def index(request):
+    # form = imageForm()
+    return render(request, 'index.html') """

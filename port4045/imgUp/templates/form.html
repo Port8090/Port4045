@@ -1,0 +1,8 @@
+<div>
+  데이터를 업로드하세요! <br>
+  <form action="{% url 'imgUp : '이름_파일업로드' %} " method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="인풋_파일업로드">
+      <input type="submit" value="등록하기">
+  </form>
+</div

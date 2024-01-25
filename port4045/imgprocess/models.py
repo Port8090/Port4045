@@ -9,7 +9,6 @@ class Post(models.Model):
     pub_date = models.DateTimeField('date published')
     content = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
-    image = models.ImageField(upload_to='images/',blank=True, null=True)
     
     def __str__(self):
         return self.title

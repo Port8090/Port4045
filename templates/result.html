@@ -5,13 +5,8 @@
 
 <h1>Article New</h1>
 
-<form action="{% url 'foodpic:create' %}" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    
-    <img id="imgPreview">
-    
-    <input type="submit">
-</form>
+{% csrf_token %}
+{{ context }}
+<img src = "{{image_url}}">
 
 <script src="{% static 'preview.js' %}"></script>

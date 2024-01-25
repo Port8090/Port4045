@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+
+
+<h1>Article New</h1>
+
+{% csrf_token %}
+{{ context }}
+<img src = "{{image_url}}">
+
+<script src="{% static 'preview.js' %}"></script>

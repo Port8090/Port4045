@@ -22,7 +22,7 @@ def create(request):
         form = imageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            r = model.predict(source = form.instance.image.name)[0]
+            r = model.predict(source = form.instance.path.name)[0]
             cls = r.names[int(r.boxes.cls[0])]
             result_image = Image.fromarray(r.plot()).convert('RGB')
             result_image_path = "static/result.jpg"

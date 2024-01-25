@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Image(models.Model):
-    path = models.ImageField(upload_to='static/image/')
+    path = models.ImageField(upload_to='static/images/')
     upload_date = models.DateTimeField(auto_now = True)
 
 # class Nutrition(models.Model):

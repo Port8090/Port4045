@@ -8,9 +8,9 @@
                 <h1 class="display-5 fw-bold">food pic</h1>
                 {% csrf_token %}
                 {{ context }}
-                <img src = "{{image_url}}">
-
-                <p class="fs-4"> [Food Name Here] </p>
+                {% load static %}
+                <img src="{% static 'result.jpg' %}"/>
+                <p class="fs-4"> {{ classname }} </p>
                 <a class="btn btn-primary btn-lg" href="#!"> [ Details ] </a>
             </div>
         </div>

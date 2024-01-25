@@ -3,6 +3,7 @@
 .proj
 images
 runs
+result.jpg
 ### Django ###
 *.log
 *.pot

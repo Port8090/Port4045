@@ -1,12 +1,13 @@
 from django.db import models
+from django.utils import timezone
 
 class Image(models.Model):
     path = models.ImageField(upload_to='images/')
-    upload_date = models.DateTimeField(auto_now=True)
-    detect_name = models.CharField()
+    upload_date = models.DateTimeField(default=timezone.now)
 
 class ResultImage(models.Model):
     image = models.ImageField(upload_to='result_images/')
+    detect_name = models.CharField(max_length=10, default='None')
 
     def __str__(self):
         return self.image.url

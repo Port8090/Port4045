@@ -17,6 +17,16 @@ from django.db import models
         verbose_name = '제품'
         verbose_name_plural = '제품' """
 
-class Product(models.Model) :
+""" class Product(models.Model) :
     colPath = models.FileField(upload_to='Uploaded Files/%y/%m/%d/', blank=True)
-    colDay = models.DateField(auto_now = True)
+    colDay = models.DateField(auto_now = True) """
+
+class imgeupload(models.Model):
+    title = models.CharField(max_length=30, null=True)
+    image = models.ImageField(upload_to='about_me/awards/&Y/%m/%d', blank=True)
+
+    create_at = models.DateTimeField(null=True, blank=True)
+    update_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.title}'

@@ -1,6 +1,6 @@
 from imgUp import models
 from django.shortcuts import render
-from imgUp.models import Product
+from imgUp.models import imgeupload
 
 def 펑션_파일업로드(request):
     if request.method == "POST":

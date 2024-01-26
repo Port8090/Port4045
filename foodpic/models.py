@@ -1,9 +1,21 @@
 from django.db import models
 
-# Create your models here.
 class Image(models.Model):
     path = models.ImageField(upload_to='images/')
-    upload_date = models.DateTimeField(auto_now = True)
+    upload_date = models.DateTimeField(auto_now=True)
+
+class ResultImage(models.Model):
+    image = models.ImageField(upload_to='result_images/')
+
+    def __str__(self):
+        return self.image.url
+
+    @classmethod
+    def create(cls, image_path):
+        result_image = cls(image=image_path)
+        result_image.save()
+        return result_image
+
 
 # class Nutrition(models.Model):
 #     code = models.CharField(max_length = 10)

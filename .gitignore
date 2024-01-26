@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 .proj
 images
+result_images
 runs
 result.jpg
 ### Django ###

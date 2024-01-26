@@ -4,6 +4,7 @@ from django.db import models
 class Image(models.Model):
     path = models.ImageField(upload_to='images/')
     upload_date = models.DateTimeField(auto_now = True)
+    detect_name = models.CharField()
 
 # class Nutrition(models.Model):
 #     code = models.CharField(max_length = 10)

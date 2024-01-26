@@ -1,0 +1,4 @@
+{% for image in award_image.all %}
+    <h1>{{image.title}}</h1>
+    <img src="{{image.image.url}}" />
+{% endfor %}

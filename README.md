@@ -86,14 +86,14 @@
 | Valid : 300개의 jpg 파일  |   |
 
 ### V3 Results
-![0](./ReadMeImg/val_batch0_labels.jpg)
-![1](./ReadMeImg/hamberger.png)
-![2](./ReadMeImg/bread.png)
-![3](./ReadMeImg/ghamberger.png)
+![0](./readMeImg/val_batch0_labels.jpg)
+![1](./readMeImg/hamberger.png)
+![2](./readMeImg/bread.png)
+![3](./readMeImg/ghamberger.png)
 
 ## 🌐 Web
 ### ERD
-![4](./ReadMeImg/erd.png)
+![4](./readMeImg/erd.png)
 
 ## 💡 Issue
 ### Crawling

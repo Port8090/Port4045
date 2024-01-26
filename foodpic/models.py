@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Image(models.Model):
     path = models.ImageField(upload_to='images/')
@@ -6,6 +7,7 @@ class Image(models.Model):
 
 class ResultImage(models.Model):
     image = models.ImageField(upload_to='result_images/')
+    detect_name = models.CharField(max_length=10, default='None')
 
     def __str__(self):
         return self.image.url

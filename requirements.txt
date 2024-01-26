@@ -10,3 +10,4 @@ pandas
 pymysql
 sqlalchemy
 mysqlclient
+django-extensions

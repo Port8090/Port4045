@@ -2,12 +2,14 @@ from django.db import models
 from django.utils import timezone
 
 class Image(models.Model):
-    image = models.ImageField(upload_to='images/')
-    upload_date = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to='./images/')
+    upload_date = models.DateTimeField(default=timezone.now) # upload_date 필드 추가
+    
 
 class ResultImage(models.Model):
-    image = models.ImageField(upload_to='result_images/')
+    image = models.ImageField(upload_to='result_images/')  # 이 부분을 수정하지 않습니다.
     detect_name = models.CharField(max_length=10, default='None')
+    upload_date = models.DateTimeField(default=timezone.now)  # upload_date 필드 추가
 
     def __str__(self):
         return self.image.url
@@ -17,6 +19,8 @@ class ResultImage(models.Model):
         result_image = cls(image=image_path)
         result_image.save()
         return result_image
+
+
 
 
 # class Nutrition(models.Model):

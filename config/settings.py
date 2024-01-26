@@ -81,7 +81,7 @@ DATABASES = {
         'NAME':  'encore',
         'USER':  'encore',
         'PASSWORD' : 'gkgkgk13',
-        'HOST' : '3.36.108.159',
+        'HOST' : '3.34.139.200',
         'PORT':  '3306'                      
         }
     }

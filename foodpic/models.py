@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class Image(models.Model):
-    path = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/')
     upload_date = models.DateTimeField(default=timezone.now)
 
 class ResultImage(models.Model):

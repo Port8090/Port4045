@@ -25,6 +25,8 @@
 
 ![dev_environment](./readMeImg/dev_environment.png)
 
+![flow](./readMeImg/flow.svg)
+
 ## 🖥️ Crawling
 1. 개인 크롤링 작업
 2. 최종

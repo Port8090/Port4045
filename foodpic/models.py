@@ -1,9 +1,27 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
 class Image(models.Model):
-    path = models.ImageField(upload_to='images/')
-    upload_date = models.DateTimeField(auto_now = True)
+    image = models.ImageField(upload_to='./images/')
+    upload_date = models.DateTimeField(default=timezone.now) # upload_date 필드 추가
+    
+
+class ResultImage(models.Model):
+    image = models.ImageField(upload_to='result_images/')  # 이 부분을 수정하지 않습니다.
+    detect_name = models.CharField(max_length=10, default='None')
+    upload_date = models.DateTimeField(default=timezone.now)  # upload_date 필드 추가
+
+    def __str__(self):
+        return self.image.url
+
+    @classmethod
+    def create(cls, image_path):
+        result_image = cls(image=image_path)
+        result_image.save()
+        return result_image
+
+
+
 
 # class Nutrition(models.Model):
 #     code = models.CharField(max_length = 10)

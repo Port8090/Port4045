@@ -1,6 +1,6 @@
 # Port8090 MiniProject
 
-# Member
+### 🍀 Member
 
 <table>
   <tbody>
@@ -15,28 +15,15 @@
   </tbody>
 </table>
 
-## ✍️ 요약
+### ✍️ 개발 목적 및 목표
 
 - 딥러닝을 활용한 음식사진 분류
 - 시작날짜 : 2024년 01월 23일
 - 완료날짜 : 2024년 01월 26일
 
-## 🛠️ 사용 기술 및 라이브러리
+### 🛠 개발환경 및 아키텍쳐
 
-- OS
-  - Windows10 / Window11
-- Language / Tool
-  - Python / VisualStudioCode
-  - HTML, CSS, JavaScript
-- Framwork
-  - Django
-- Database / Tool
-  - MariaDB
-- 형상관리
-  - Git
-- Crawling
-- Deep Learning
-  - ObjectDetection : Yolov5 / Yolov8
+![dev_environment](./readMeImg/dev_environment.png)
 
 ## 🖥️ Crawling
 1. 개인 크롤링 작업

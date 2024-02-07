@@ -15,9 +15,15 @@
   </tbody>
 </table>
 
+### 📽️ 시연영상
+
+https://github.com/Port8090/Port4045/assets/67898022/a8a3116f-d0eb-4c90-9329-0e008203b962
+
 ### ✍️ 개발 목적 및 목표
 
-- 딥러닝을 활용한 음식사진 분류
+- 본 프로젝트는 Crawling으로 구한 Data를 Hadoop에 축적하고 필요한 Data를 꺼내 활용하며 Yolo를 통해 Object Detection를 구현해 Django로 서비스를 제공하는 Port8090팀의 미니 프로젝트이다.
+- 비정형 데이터인 Image를 커스텀 학습 모델인 Yolo를 통해 Labeling을 할 수 있게 된다. 이를 통해 Input으로 받을 정보들 중 text뿐만 아니라 Image를 받아 처리할 수 있게 된다.
+- 현재 서비스를 지원할 때 Input을 받아 처리할 수 있는 형태는 text가 제일 편하다. 하지만 앞으로 Port8090팀이 본 Project를 진행할 때 음식 관련한 아이디어를 가지고 있기 때문에 text뿐만 아니라 Image를 Input을 받아 다양한 서비스를 제공할 수 있는 토대를 문서로 기록해 서비스를 구축하고자 한다.
 - 시작날짜 : 2024년 01월 23일
 - 완료날짜 : 2024년 01월 26일
 
@@ -26,6 +32,7 @@
 ![dev_environment](./readMeImg/dev_environment.png)
 
 ![flow](./readMeImg/flow.svg)
+
 
 ## 🖥️ Crawling
 1. 개인 크롤링 작업
